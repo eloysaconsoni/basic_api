@@ -11,7 +11,7 @@ Está API tem as funcionalidades de:
 
 ## Técnologias utilizadas
 Para entender melhor sobre as principais técnoligias que foram utlizadas na aplicação, segue os links
-[Node.js](https://nodejs.org/ "Node.js")
-[Express.js](https://expressjs.com/ "Express.js")
-[Sequelize ORM](https://sequelize.org/ "Sequelize ORM")
-[Anestech API](https://axreg.docs.apiary.io/ "Anestech API")
+1. [Node.js](https://nodejs.org/ "Node.js")
+2. [Express.js](https://expressjs.com/ "Express.js")
+3. [Sequelize ORM](https://sequelize.org/ "Sequelize ORM")
+4. [Anestech API](https://axreg.docs.apiary.io/ "Anestech API")

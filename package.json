@@ -4,7 +4,7 @@
   "description": "Teste de desenvolvimento back-end para a empresa Anestech",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon src/server.js",
+    "start": "nodemon src/server.js -L",
     "test": "jest"
   },
   "author": "Eloysa Consoni",
