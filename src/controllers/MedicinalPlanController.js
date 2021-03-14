@@ -1,4 +1,3 @@
-const Op = require('sequelize');
 const MedicinalPlan = require('../models/MedicinalPlan');
 
 module.exports = {
@@ -8,7 +7,7 @@ module.exports = {
       const medicinalPlan = await MedicinalPlan.findAll();
       return res.status(200).json(medicinalPlan);
     } catch (err) {
-      return res.status(400).send({ error: err });
+      return res.status(400).send(err.message);
     }
   },
   async store(req, res) {
@@ -22,15 +21,8 @@ module.exports = {
   },
   async show(req, res) {
     try {
-      const { name } = req.body;
-      const medicinalPlan = await MedicinalPlan.findAll({
-        attributes: ['name', 'active'],
-        where: {
-          name: {
-            [Op.like]: `%${name}`,
-          },
-        },
-      });
+      const { id } = req.params;
+      const medicinalPlan = await MedicinalPlan.findByPk(id);
       return res.status(200).json(medicinalPlan);
     } catch (err) {
       return res.status(404).send({ error: err });

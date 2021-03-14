@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 
 class MedicinalPlan extends Model {
-  static init(connection) {
+  static init(sequelize) {
     super.init({
       name: {
         type: DataTypes.STRING,
@@ -18,7 +18,7 @@ class MedicinalPlan extends Model {
       active: DataTypes.BOOLEAN,
     },
     {
-      sequelize: connection,
+      sequelize,
     });
   }
 }
